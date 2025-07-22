@@ -8,7 +8,7 @@ import ActionBtns from "./components/ActionBtns";
 
 function App() {
 
-    const randomString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_";
+    const randomString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^abcdefghijklmnopqrstuvwxyz&*()_0123456789";
 
     const [pw_range, setRange] = useState(10);
     const [password, setPassword] = useState("");

@@ -86,7 +86,7 @@ body {
     /* Rounded corners */
     box-shadow: var(--shadow);
     /* Subtle shadow */
-    width: 100%;
+    width: 40rem;
     /* Full width */
     overflow: hidden;
     /* Hide overflow content */
