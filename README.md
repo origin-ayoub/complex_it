@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a43958a7-f485-4db8-9c2b-5ff1e1fed9d2/deploy-status)](https://app.netlify.com/projects/complex-it/deploys)
+
 # Complext it 🔐
 
 **Generate complex passwords with one click for better security.**
