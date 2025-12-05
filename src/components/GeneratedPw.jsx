@@ -1,6 +1,16 @@
+import { useEffect, useRef } from "react";
 import { copyToClip } from "../utils/helpers";
 
 export default function PasswordCont({ password }) {
+    const passInput = useRef(null);
+
+    useEffect(() => {
+        const pwDef = () => {
+            if (!passInput?.current.readOnly) passInput.current.readOnly = true;
+        }
+        pwDef();
+    }, []);
+
     return (
         <div className="section">
             <h2 className="section-title">
@@ -8,9 +18,10 @@ export default function PasswordCont({ password }) {
             </h2>
             <div className="result-container">
                 <input
-                    id="password"
                     readOnly
                     type="text"
+                    id="password"
+                    ref={passInput}
                     value={password}
                     className="result"
                     placeholder="Password..."

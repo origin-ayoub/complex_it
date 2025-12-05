@@ -2,23 +2,14 @@
 /* CSS CUSTOM PROPERTIES */
 /* ==================== */
 :root {
-    /* Primary teal color for main UI elements */
     --primary: #0d9488;
-    /* Secondary deep blue color for accents */
     --secondary: #1d0289;
-    /* Light background color for content areas */
     --light: #f9fafb;
-    /* Dark text color for contrast */
     --dark: #1e293b;
-    /* Accent color for secondary UI elements */
     --accent: #94a3b8;
-    /* Gradient used for buttons and headers */
     --gradient: linear-gradient(to right, var(--primary), var(--secondary));
-    /* Base border radius for rounded corners */
     --border-radius: 15px;
-    /* Default shadow for depth effects */
     --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    /* Standard transition for interactive elements */
     --transition: all 0.3s ease;
 }
 
@@ -27,11 +18,8 @@
 /* ============== */
 * {
     margin: 0;
-    /* Remove default margins */
     padding: 0;
-    /* Remove default padding */
     box-sizing: border-box;
-    /* Include padding/border in element sizing */
 }
 
 /* ============== */
@@ -39,21 +27,13 @@
 /* ============== */
 .Toastify__toast {
     text-align: center;
-    /* Center toast content */
     margin: 0 auto;
-    /* Horizontal centering */
     display: flex;
-    /* Flex layout for content */
     justify-content: space-between;
-    /* Space out content */
     align-items: center;
-    /* Vertical centering */
     width: auto;
-    /* Auto width based on content */
     font-weight: 800;
-    /* Bold text */
     letter-spacing: 1px;
-    /* Slightly spaced letters */
 }
 
 /* ============== */
@@ -61,19 +41,12 @@
 /* ============== */
 body {
     font-family: 'Inter', sans-serif;
-    /* Main font family */
     background: var(--secondary);
-    /* Secondary color background */
     color: var(--dark);
-    /* Dark text color */
     min-height: 100vh;
-    /* Full viewport height */
     display: flex;
-    /* Flex layout */
     justify-content: center;
-    /* Horizontal centering */
     align-items: center;
-    /* Vertical centering */
 }
 
 /* ============== */
@@ -81,23 +54,14 @@ body {
 /* ============== */
 .app {
     background: var(--light);
-    /* Light background */
     border-radius: var(--border-radius);
-    /* Rounded corners */
     box-shadow: var(--shadow);
-    /* Subtle shadow */
     width: 40rem;
-    /* Full width */
     overflow: hidden;
-    /* Hide overflow content */
     display: flex;
-    /* Flex layout */
     flex-direction: column;
-    /* Vertical stacking */
     margin: 0 auto;
-    /* Horizontal centering */
     transition: var(--transition);
-    /* Smooth transitions */
 }
 
 /* ============== */
@@ -105,67 +69,41 @@ body {
 /* ============== */
 .app-header {
     padding-block: 1.5rem;
-    /* Vertical padding */
     padding-inline: 1rem;
-    /* Horizontal padding */
     background: var(--gradient);
-    /* Gradient background */
     color: white;
-    /* White text */
     text-align: center;
-    /* Centered content */
     position: relative;
-    /* For pseudo-element positioning */
     overflow: hidden;
-    /* Hide overflow */
 }
 
 /* Decorative background element */
 .app-header::before {
     content: "";
-    /* Required for pseudo-elements */
     position: absolute;
-    /* Absolute positioning */
     top: -50%;
-    /* Position above container */
     left: -50%;
-    /* Position left of container */
     width: 200%;
-    /* Double width for effect */
     height: 200%;
-    /* Double height for effect */
-    /* Radial gradient for subtle texture */
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     transform: rotate(30deg);
-    /* Angled for dynamic effect */
 }
 
 .app-header h1 {
     font-size: 1.5rem;
-    /* Heading size */
     position: relative;
-    /* For z-index */
     z-index: 2;
-    /* Above pseudo-element */
     display: flex;
-    /* Flex layout */
     align-items: center;
-    /* Vertical centering */
     justify-content: center;
-    /* Horizontal centering */
     gap: 1rem;
-    /* Spacing between items */
 }
 
 .app-header p {
     opacity: 0.9;
-    /* Slightly transparent */
     font-weight: 300;
-    /* Light font weight */
     position: relative;
-    /* For z-index */
     z-index: 2;
-    /* Above pseudo-element */
 }
 
 /* ============== */
@@ -173,15 +111,10 @@ body {
 /* ============== */
 .app-main {
     padding: 1.5rem;
-    /* Internal spacing */
     display: flex;
-    /* Flex layout */
     flex-direction: column;
-    /* Vertical stacking */
     gap: 2rem;
-    /* Spacing between sections */
     border-radius: var(--border-radius);
-    /* Rounded corners */
 }
 
 /* ============== */
@@ -189,33 +122,22 @@ body {
 /* ============== */
 .section {
     background: white;
-    /* White background */
     border-radius: var(--border-radius) !important;
-    /* Rounded corners */
     padding: 1.5rem;
-    /* Internal spacing */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    /* Subtle shadow */
 }
 
 .section-title {
     font-size: 1.1rem;
-    /* Title size */
     margin-bottom: 1.2rem;
-    /* Spacing below title */
     color: var(--primary);
-    /* Primary color */
     display: flex;
-    /* Flex layout */
     align-items: center;
-    /* Vertical centering */
     gap: 0.7rem;
-    /* Spacing between items */
 }
 
 .section-title i {
     font-size: 1.3rem;
-    /* Icon size */
 }
 
 /* ============== */
@@ -223,50 +145,32 @@ body {
 /* ============== */
 .result-container {
     display: flex;
-    /* Flex layout */
     background: white;
-    /* White background */
     border: 2px solid var(--accent);
-    /* Accent color border */
     border-radius: var(--border-radius);
-    /* Rounded corners */
     overflow: hidden;
-    /* Hide overflow */
     transition: var(--transition);
-    /* Smooth transitions */
 }
 
 /* Focus state styling */
 .result-container:focus-within {
     border-color: var(--primary);
-    /* Primary color border */
     box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
-    /* Glow effect */
 }
 
 .result {
     flex: 1;
-    /* Take available space */
     border: none;
-    /* No border */
     font-size: 1.1rem;
-    /* Text size */
     padding: 1.1rem 1.3rem;
-    /* Internal spacing */
     outline: none;
-    /* Remove default focus outline */
     background: transparent;
-    /* Transparent background */
     min-height: 60px;
-    /* Minimum height */
     overflow: hidden;
-    /* Hide overflow */
     text-overflow: ellipsis;
-    /* Ellipsis for long text */
     font-weight: 500;
-    /* Medium font weight */
     color: var(--dark);
-    /* Dark text color */
+    cursor: default;
 }
 
 /* ============== */
@@ -274,34 +178,22 @@ body {
 /* ============== */
 .copy-btn {
     background: transparent;
-    /* Transparent background */
     color: var(--dark);
-    /* Dark text color */
     border: none;
-    /* No border */
     padding: 0 1.5rem;
-    /* Horizontal padding */
     cursor: pointer;
-    /* Pointer cursor */
     transition: var(--transition);
-    /* Smooth transitions */
     -webkit-tap-highlight-color: transparent;
-    /* Remove tap highlight */
     display: grid;
-    /* Grid layout */
     place-items: center;
-    /* Center content */
     font-size: 1.3rem;
-    /* Icon size */
 }
 
 /* Interactive states */
 .copy-btn:hover,
 .copy-btn:focus {
     color: var(--primary);
-    /* Primary color */
     background: rgba(13, 148, 136, 0.1);
-    /* Light primary tint */
 }
 
 /* ============== */
@@ -309,84 +201,54 @@ body {
 /* ============== */
 .pwLnCn {
     display: flex;
-    /* Flex layout */
     flex-direction: column;
-    /* Vertical stacking */
     gap: 1.2rem;
-    /* Spacing between items */
 }
 
 .pwLnBox {
     display: flex;
-    /* Flex layout */
     align-items: center;
-    /* Vertical centering */
     justify-content: space-between;
-    /* Space out items */
     gap: 1rem;
-    /* Spacing between items */
 }
 
 /* Custom range input styling */
 .pwLnCn input[type="range"] {
     flex: 1;
-    /* Take available space */
     height: 8px;
-    /* Slider height */
     cursor: pointer;
-    /* Pointer cursor */
-    /* Gradient track */
     background: linear-gradient(to right, var(--primary), var(--secondary));
     border-radius: 4px;
-    /* Rounded corners */
 }
 
 /* Custom slider thumb */
 .pwLnCn input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Remove default styling */
     width: 22px;
-    /* Thumb size */
     height: 22px;
-    /* Thumb size */
     border-radius: 50%;
-    /* Circular thumb */
     background: var(--primary);
-    /* Primary color */
     cursor: pointer;
-    /* Pointer cursor */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow */
     transition: var(--transition);
-    /* Smooth transitions */
 }
 
 /* Thumb hover state */
 .pwLnCn input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.1);
-    /* Slightly enlarge */
     background: var(--secondary);
-    /* Secondary color */
 }
 
 /* Length display number */
 .pwLnBox span {
     min-width: 45px;
-    /* Minimum width */
     text-align: center;
-    /* Centered text */
     font-weight: 700;
-    /* Bold text */
     font-size: 1.3rem;
-    /* Text size */
     color: var(--dark);
-    /* Dark text */
     background: #f0f4f8;
-    /* Light background */
     padding: 0.4rem 0.8rem;
-    /* Internal spacing */
     border-radius: 8px;
-    /* Rounded corners */
 }
 
 /* ============== */
@@ -394,23 +256,16 @@ body {
 /* ============== */
 .action-buttons {
     width: 100% !important;
-    /* Full width */
     max-width: 100%;
-    /* No max width */
     display: flex;
-    /* Flex layout */
     gap: 1rem;
-    /* Spacing between buttons */
     justify-content: space-between;
-    /* Space out buttons */
     align-items: center;
-    /* Vertical centering */
 }
 
 /* Last button special styling */
 .action-buttons button:last-child {
     width: auto;
-    /* Auto width */
 }
 
 /* Hide span in last button by default */
@@ -428,59 +283,38 @@ body {
 /* ============== */
 .btn-primary {
     background: var(--gradient);
-    /* Gradient background */
     color: white;
-    /* White text */
     border: none;
-    /* No border */
     border-radius: var(--border-radius);
-    /* Rounded corners */
     padding: 1.1rem;
-    /* Internal spacing */
     font-weight: 600;
-    /* Semi-bold text */
     font-size: 1.1rem;
-    /* Text size */
     cursor: pointer;
-    /* Pointer cursor */
     transition: var(--transition);
-    /* Smooth transitions */
     display: flex;
-    /* Flex layout */
     justify-content: center;
-    /* Horizontal centering */
     align-items: center;
-    /* Vertical centering */
     gap: 0.8rem;
-    /* Spacing between items */
     box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
-    /* Subtle shadow */
 }
 
 /* Hover state */
 .btn-primary:hover {
     transform: translateY(-3px);
-    /* Lift effect */
     box-shadow: 0 6px 15px rgba(13, 148, 136, 0.4);
-    /* Enhanced shadow */
 }
 
 /* Active state */
 .btn-primary:active {
     transform: translateY(0);
-    /* Reset position */
 }
 
 /* Disabled state */
 .btn-primary:disabled {
     background: var(--accent);
-    /* Accent color */
     cursor: not-allowed;
-    /* Disabled cursor */
     transform: none;
-    /* No transform */
     box-shadow: none;
-    /* No shadow */
 }
 
 /* ============== */
@@ -488,21 +322,13 @@ body {
 /* ============== */
 .app-footer {
     text-align: center;
-    /* Centered content */
     padding: 1.5rem;
-    /* Internal spacing */
     background: rgba(233, 236, 239, 0.6);
-    /* Semi-transparent background */
     font-size: 0.95rem;
-    /* Text size */
     color: #000;
-    /* Black text */
     border-radius: 10px;
-    /* Rounded corners */
     letter-spacing: .4px;
-    /* Slightly spaced letters */
     box-sizing: border-box;
-    /* Include padding in width */
 }
 
 /* ============== */
@@ -510,9 +336,7 @@ body {
 /* ============== */
 *:focus-visible {
     outline: 3px solid var(--primary);
-    /* Primary color outline */
     outline-offset: 2px;
-    /* Space between outline and element */
 }
 
 /* ============== */
@@ -523,83 +347,65 @@ body {
 @media screen and (max-width: 768px) {
     body {
         margin: auto;
-        /* Center body */
         width: auto;
-        /* Auto width */
     }
 
     .app {
         width: auto;
-        /* Auto width */
     }
 
     .app-main {
         gap: 1.5rem;
-        /* Reduced spacing */
         width: auto;
-        /* Auto width */
     }
 
     .section {
         width: auto;
-        /* Auto width */
         padding: 1.2rem;
-        /* Reduced padding */
     }
 
     .app-header {
         width: auto;
-        /* Auto width */
         padding: 1.5rem 1.2rem;
-        /* Adjusted padding */
     }
 
     .app-header h1 {
         font-size: 1.5rem;
-        /* Maintain heading size */
     }
 
     .result {
         width: auto;
-        /* Auto width */
         font-size: 1rem;
-        /* Slightly smaller text */
         padding: 0.9rem 1.1rem;
-        /* Adjusted padding */
     }
 
     /* Stack buttons vertically */
-    .action-buttons {
-        flex-direction: column-reverse;
-        /* Reverse column order */
-    }
+    /* .action-buttons { */
+    /* flex-direction: column-reverse; */
+    /* } */
 
     /* Full width for last button */
     .action-buttons button:last-child {
-        width: 100%;
-        /* Full width */
+        width: auto;
         display: flex;
-        /* Flex layout */
         justify-content: center;
-        /* Horizontal centering */
         align-items: center;
-        /* Vertical centering */
+    }
+
+    .action-buttons button:first-child {
+        width: 100%;
     }
 
     /* Show span in last button */
     .action-buttons button:last-child span {
         display: block;
-        /* Show text */
     }
 
     /* Adjust toast for mobile */
     .Toastify__toast {
         width: 100%;
-        /* Full width */
         align-items: center;
-        /* Vertical centering */
         justify-content: center;
-        /* Horizontal centering */
     }
 }
 
@@ -609,145 +415,106 @@ body {
     /* Adjust root variables */
     :root {
         --border-radius: 12px;
-        /* Slightly smaller radius */
         --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        /* Lighter shadow */
     }
 
     /* Base adjustments */
     body {
-        padding: 0.5rem;
-        /* Reduced padding */
+        /* padding: 0.5rem; */
+        width: auto;
     }
 
     /* App container adjustments */
     .app {
-        width: 100%;
-        /* Full width */
+        width: auto;
         max-width: 100%;
-        /* No max width */
         margin: 0;
-        /* No margin */
         border-radius: var(--border-radius);
-        /* Use updated radius */
     }
 
     /* Header adjustments */
     .app-header {
         padding-block: 1rem;
-        /* Reduced vertical padding */
         padding-inline: 0.8rem;
-        /* Reduced horizontal padding */
     }
 
     .app-header h1 {
         font-size: 1.3rem;
-        /* Smaller heading */
         gap: 0.5rem;
-        /* Reduced gap */
     }
 
     .app-header p {
         font-size: 0.9rem;
-        /* Smaller text */
     }
 
     /* Main content adjustments */
     .app-main {
         padding: 1rem;
-        /* Reduced padding */
         gap: 1.2rem;
-        /* Reduced gap */
     }
 
     .section {
         padding: 1rem;
-        /* Reduced padding */
     }
 
     .section-title {
         font-size: 1rem;
-        /* Smaller title */
         margin-bottom: 1rem;
-        /* Reduced margin */
         gap: 0.5rem;
-        /* Reduced gap */
     }
 
     /* Stack result and copy button vertically */
     .result-container {
         flex-direction: column;
-        /* Column layout */
     }
 
     .result {
         font-size: 0.95rem;
-        /* Smaller text */
         padding: 0.9rem 1rem;
-        /* Adjusted padding */
         min-height: 50px;
-        /* Reduced height */
         text-align: center;
-        /* Centered text */
     }
 
     /* Full width copy button with top border */
     .copy-btn {
         padding: 0.5rem;
-        /* Reduced padding */
         border-top: 1px solid var(--accent);
-        /* Separator line */
         width: 100%;
-        /* Full width */
         font-size: 1.1rem;
-        /* Slightly smaller icon */
     }
 
     /* Password length controls */
     .pwLnCn {
         gap: 1rem;
-        /* Reduced gap */
     }
 
     .pwLnBox span {
         font-size: 1.1rem;
-        /* Slightly smaller text */
         min-width: 40px;
-        /* Slightly narrower */
         padding: 0.3rem 0.6rem;
-        /* Reduced padding */
     }
 
     /* Button adjustments */
     .btn-primary {
         padding: 0.9rem;
-        /* Reduced padding */
         font-size: 1rem;
-        /* Smaller text */
     }
 
     .action-buttons {
         gap: 0.8rem;
-        /* Reduced gap */
     }
 
     /* Footer adjustments */
     .app-footer {
         padding: 1rem;
-        /* Reduced padding */
         font-size: 0.85rem;
-        /* Smaller text */
     }
 
     /* Toast adjustments */
     .Toastify__toast {
         width: 90%;
-        /* Slightly narrower */
         max-width: 90%;
-        /* Max width constraint */
         margin: 0.5rem auto;
-        /* Reduced margin */
         font-size: 0.9rem;
-        /* Smaller text */
     }
 }

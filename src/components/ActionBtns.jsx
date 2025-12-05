@@ -5,7 +5,7 @@ export default function ActionBtns({ password, generate }) {
     return (
         <div className="action-buttons">
             <button className="btn-primary" onClick={generate}>
-                <i className="fas fa-sync-alt"></i> Generate New Password
+                Generate <i className="fas fa-sync-alt"></i> Password
             </button>
 
             <button
@@ -15,7 +15,7 @@ export default function ActionBtns({ password, generate }) {
                 aria-label="share"
             >
                 <i className="fas fa-share-alt"></i>
-                <span>Share</span>
+                {/* <span>Share</span> */}
             </button>
         </div>
     )

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 import PasswordSettings from "./components/PasswordSettings";
 import GeneratedPw from "./components/GeneratedPw";
@@ -18,9 +18,7 @@ function App() {
             if (pw_range < 10) {
                 setTimeout(() => {
                     setRange(10);
-                    toast.warning('NOT RECOMMENDED');
                 }, 1000);
-
                 return;
             }
 
@@ -29,7 +27,6 @@ function App() {
             for (let i = 0; i < pw_range; i++) {
                 res += randomString[Math.floor(Math.random() * String(randomString)?.length)].toString();
             }
-
             setPassword(res);
         }
 
@@ -38,10 +35,8 @@ function App() {
 
     const generate = () => {
         if (pw_range < 10) {
-            toast.warning('NOT RECOMMENDED');
             setTimeout(() => setRange(10), 1000);
-
-            return
+            return;
         }
 
         let res = "";
@@ -49,7 +44,6 @@ function App() {
         for (let i = 0; i < pw_range; i++) {
             res += randomString[Math.floor(Math.random() * String(randomString)?.length)].toString();
         }
-
         setPassword(res);
     }
 
@@ -64,11 +58,8 @@ function App() {
 
                 <main className="app-main">
                     <GeneratedPw password={password} />
-
                     <PasswordSettings setRange={setRange} pw_range={pw_range} />
-
                     <ActionBtns password={password} generate={generate} />
-
                     <footer className="app-footer">
                         <p>© {new Date().getFullYear()} Secure Password Generator</p>
                     </footer>

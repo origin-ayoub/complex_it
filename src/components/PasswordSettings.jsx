@@ -11,6 +11,7 @@ export default function PasswordSettings({ pw_range, setRange }) {
                 </div>
                 <input
                     id="length"
+                    min={"10"}
                     max={50}
                     type="range"
                     value={pw_range}
